@@ -1,0 +1,112 @@
+:root {
+  --ink: #172033;
+  --muted: #667085;
+  --line: #e5e9f2;
+  --accent: #6558e8;
+  --accent-soft: #eeecff;
+  --surface: #ffffff;
+  --page-bg: #f5f7fb;
+  --body-glow: rgba(101, 88, 232, 0.1);
+  --table-head: #f5f6fa;
+  --content-text: #475467;
+  --shadow: 0 5px 18px rgba(25, 35, 70, 0.035);
+  --shadow-hover: 0 12px 28px rgba(25, 35, 70, 0.08);
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--page-bg);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --ink: #edf1fa;
+  --muted: #a4aec2;
+  --line: #343d50;
+  --accent: #aa9cff;
+  --accent-soft: #302b50;
+  --surface: #1c2330;
+  --page-bg: #111722;
+  --body-glow: rgba(125, 103, 255, 0.13);
+  --table-head: #252e3d;
+  --content-text: #c0c9d8;
+  --shadow: 0 5px 18px rgba(0, 0, 0, 0.16);
+  --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='system'] {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme='system'] {
+    color-scheme: dark;
+    --ink: #edf1fa;
+    --muted: #a4aec2;
+    --line: #343d50;
+    --accent: #aa9cff;
+    --accent-soft: #302b50;
+    --surface: #1c2330;
+    --page-bg: #111722;
+    --body-glow: rgba(125, 103, 255, 0.13);
+    --table-head: #252e3d;
+    --content-text: #c0c9d8;
+    --shadow: 0 5px 18px rgba(0, 0, 0, 0.16);
+    --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 24px 60px;
+  background:
+    radial-gradient(ellipse at 12% 0%, var(--body-glow), transparent 36rem),
+    var(--page-bg);
+}
+
+#root {
+  width: 100%;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 24px 16px 44px;
+  }
+}
